@@ -1,4 +1,11 @@
 /* RESET */
+$headerColor:  #eeeff1;
+$secondaryColor:  #34547A;
+$additionalColor: #4e729d;
+$anotherColor: #727272;
+$classicColor:  #000000;
+$textColor: #fff;
+$fontSize: 16px;
 
 * {
     margin: 0;
@@ -7,21 +14,13 @@
     box-sizing: border-box;
 }
 
-:root {
-    --headerColor:  #eeeff1;
-    --secondaryColor:  #34547A;
-    --additionalColor: #4e729d;
-    --anotherColor: #727272;
-    --classicColor:  #000000;
-    --textColor: #fff;
-}
 
 html {
-    font-size: 16 px;
+    font-size: $fontSize;
 }
 
 body {
-    font-size: 1rem;
+    font-size:$fontSize;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -47,27 +46,27 @@ h2 {
 .hero__btn,
 .about__text,
 .work-header__text  {
-    line-height: 1.64rem;
+    line-height: $fontSize*1.64;
 }
 
 
 /* HEADER */
 
 .header {
-    background-color: var(--headerColor);
-    padding: 80px 0;
+    background-color: $headerColor;
+    padding: $fontSize*5 0;
 }
 
 .navbar {
-    margin-bottom: 162px;
+    margin-bottom: $fontSize*10.125;
 }
 
 .nav {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
-    column-gap: 23px;
-    margin-left: -10px;
+    column-gap: $fontSize*1.4375;
+    margin-left: $fontSize*0.625;
     justify-content: space-between;
     list-style: none;
 }
@@ -79,8 +78,8 @@ h2 {
 .nav__link {
     display: block;
     text-decoration: none;
-    padding: 10px;
-    color: var(--classicColor);
+    padding:$fontSize*0.625;
+    color: $classicColor;
     letter-spacing: 0.1em;
     transition: color 0.5s;
     cursor: pointer;
@@ -93,12 +92,12 @@ h2 {
 
 .nav__link:hover,
 .nav__link--active {
-    color: var(--secondaryColor);
+    color: $secondaryColor;
 }
 
 .nav__btn {
-    width: 30px;
-    height: 22px;
+    width: $fontSize*1.875;
+    height: $fontSize*1.375;
     position: relative;
     margin: 0;
     transform: rotate(0deg);
@@ -107,7 +106,7 @@ h2 {
 }
 
 .nav__btn.active span:nth-child(1){
-    top: 9px;
+    top: $fontSize*0.5625;
     transform: rotate(135deg);
 }
 
@@ -117,7 +116,7 @@ h2 {
 }
 
 .nav__btn.active span:nth-child(3){
-    top: 9px;
+    top: $fontSize*0.5625;
     transform: rotate(-135deg);
 }
 
@@ -126,9 +125,9 @@ h2 {
     position: absolute;
     left: 0;
     width: 100%;
-    height: 4px;
-    background-color: var(--classicColor);
-    border-radius: 4px;
+    height: $fontSize*0.25;
+    background-color: $classicColor;
+    border-radius: $fontSize*0.25;
     opacity: 1;
     transform: rotate(0deg);
     transition: 0.25s ease-in-out;
@@ -139,64 +138,64 @@ h2 {
 }
 
 .nav__btn-row:nth-child(2) {
-    top: 9px;
+    top: $fontSize*0.5625;
 }
 
 .nav__btn-row:nth-child(3) {
-    top: 18px;
+    top: $fontSize*1.125;
 }
 
 .hero__title {
-    font-size: 3rem;
-    line-height: 4.92rem;
-    margin-bottom: 60px;
+    font-size: $fontSize*3;
+    line-height: $fontSize*4.92;
+    margin-bottom: $fontSize*3.75;
 }
 
 .hero__text {
-    margin-bottom: 65px;
-    color: var(--anotherColor);
-    max-width: 540px;
+    margin-bottom: $fontSize*4.0625;
+    color: $anotherColor;
+    max-width: $fontSize*33.75;
 }
 
 .hero__btn,
 .project, 
 .footer {
-    color: var(--textColor);
-    background-color: var(--secondaryColor);
+    color: $textColor;
+    background-color: $secondaryColor;
 }
 
 .hero__btn {
     display: inline-block;
-    min-width: 225px;
+    min-width: $fontSize*14.0625;
     text-decoration: none;
     padding: 20px 2%;
     text-align: center;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     transition: all 0.3s ease;
-    margin-bottom: 140px;
+    margin-bottom: $fontSize*8.75;
 }
 
 .hero__btn:hover {
-    background-color: var(--additionalColor);
+    background-color: $additionalColor;
 }
 
 /* ABOUT */
 
 .about {
-    padding-top: 112px;
-    padding-bottom: 100px;
-    background-color: var(--textColor);
+    padding-top: $fontSize*7;
+    padding-bottom: $fontSize*6.25;
+    background-color: $textColor;
 }
 
 .about__title {
-    font-size: 2rem;
-    line-height: 3.92rem;
-    margin-bottom: 40px;
+    font-size: $fontSize*2;
+    line-height: $fontSize*3.92;
+    margin-bottom: $fontSize*2.5;
 }
 
 .about__container {
-    max-width: 600px;
+    max-width: $fontSize*37.5;
     margin: 0 auto;
     padding: 0 3%;
 }
@@ -227,41 +226,41 @@ h2 {
 }
 
 .project__number {
-    font-size: 1.31rem;
+    font-size: $fontSize*1.31;
 }
 
 /* WORK */
 
 .work {
-    background-color: var(--headerColor);
+    background-color: $headerColor;
 }
 
 .work-header {
-    max-width: 600px;
+    max-width: $fontSize*37.5;
     margin: 0 auto;
     padding: 100px 3% 50px;
     text-align: center;
 }
 
 .work-header__title {
-    font-size: 2rem;
-    line-height: 2.34rem;
-    margin-bottom: 50px;
+    font-size: $fontSize*2;
+    line-height: $fontSize*2.34;
+    margin-bottom: $fontSize*3.125;
 }
 
 .work-header__text {
-    color: var(--anotherColor);
+    color: $anotherColor;
 }
 
 .work-video {
-    max-width: 1110px;
-    padding-bottom: 100px;
+    max-width: $fontSize*69.375;
+    padding-bottom: $fontSize*6.25;
     cursor: pointer;
 }
 
 .work-video iframe {
     width: 100%;
-    height: 600px;
+    height: $fontSize*37.5;
 }
 
 @media screen and (min-width: 768px) {
@@ -319,17 +318,17 @@ h2 {
 
 /* FOOTER */
 .footer {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: $fontSize*3.125;
+    padding-bottom: $fontSize*3.125;
 }
 .footer__bg {
-    padding-bottom: 20px;
+    padding-bottom: $fontSize*1.25;
 }
 
 @media screen and (max-width: 767px){
     .nav {
         display: none;
-        margin-top: 30px;
+        margin-top: $fontSize*1.875;
     }
 
     .nav--active {
@@ -341,15 +340,15 @@ h2 {
     }
 
     .work-video iframe {
-        height: 400px;
+        height: $fontSize*25;
     }
 
     .footer__bg {
-        padding-bottom: 10px;
+        padding-bottom: $fontSize*0.625;
     }
 
     .footer {
-        padding: 40px;
+        padding: $fontSize*2.5;
     }
 
 }
